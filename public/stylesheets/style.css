@@ -149,6 +149,9 @@ input[type="submit"]:active,button:active {
   background-color: var(--theme-dark-2);
   padding: 40px 30px 30px;
   border-radius: 4px;
+  -moz-box-shadow: 0 2px 5px var(--theme-dark-0);
+  -webkit-box-shadow: 0 2px 5px var(--theme-dark-0);
+  box-shadow: 0 2px 5px var(--theme-dark-0);
 }
 .landing-wrapper-title {
   text-align: center;
