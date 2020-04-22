@@ -1,7 +1,8 @@
 $(() => {
-    $('#landing-form').on('submit', (e) => {
-        var name = $('#username').val();
-        var user = { name };
-        localStorage.setItem('user', JSON.stringify(user));
+    $('#join-game').on('click', () => {
+        $('#join-game-modal').css('visibility', 'visible');
+    });
+    $('.modal-close').on('click', () => {
+        $('#join-game-modal').css('visibility', 'hidden');
     });
 });

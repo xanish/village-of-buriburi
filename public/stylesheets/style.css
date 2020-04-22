@@ -110,7 +110,7 @@ textarea {
   border: 1px solid var(--color-input-border);
   background: var(--theme-dark-1);
 }
-input[type="submit"],button {
+input[type="submit"],button,.btn {
   display: block;
   width: 100%;
   padding: 15px 20px;
@@ -120,13 +120,14 @@ input[type="submit"],button {
   margin-bottom: 20px;
   border: 1px solid var(--theme-dark-1);
   color: var(--theme-font-on-surface-1);
+  text-decoration: none;
 }
-input[type="submit"]:hover,button:hover {
+input[type="submit"]:hover,button:hover,.btn:hover {
   cursor: pointer;
   background: var(--theme-dark-3);
   color: var(--theme-font-on-surface-2);
 }
-input[type="submit"]:active,button:active {
+input[type="submit"]:active,button:active,.btn:active {
   background: var(--theme-dark-1);
   -moz-box-shadow: inset 0 0 10px var(--theme-dark-0);
   -webkit-box-shadow: inset 0 0 10px var(--theme-dark-0);
@@ -146,6 +147,7 @@ input[type="submit"]:active,button:active {
 #landing-wrapper {
   display: flex;
   flex-direction: column;
+  width: 30%;
   background-color: var(--theme-dark-2);
   padding: 40px 30px 30px;
   border-radius: 4px;
@@ -154,6 +156,34 @@ input[type="submit"]:active,button:active {
   box-shadow: 0 2px 5px var(--theme-dark-0);
 }
 .landing-wrapper-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+#join-game-modal {
+  visibility: hidden;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, .5);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.modal {
+  background-color: var(--theme-dark-2);
+  border-radius: 4px;
+  padding: 40px 30px 30px;
+}
+.modal-header {
+  color: var(--theme-font-on-surface-1);
+  text-align: right;
+}
+.modal-close {
+  cursor: pointer;
+}
+.modal-title {
   text-align: center;
   margin-bottom: 30px;
 }

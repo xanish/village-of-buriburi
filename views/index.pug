@@ -6,8 +6,17 @@ block content
       .landing-wrapper-title
         h1= title
       .landing-wrapper-body
-        form#landing-form(action="/create", method="POST")
+        a(href='/create' class='btn') Create New Game
+        button#join-game(type="button") Join Existing
+  #join-game-modal
+    .modal
+      .modal-header
+        span.fa.fa-close.modal-close
+      .modal-title
+        h3 Enter Game Details
+      .modal-body
+        form#join-game-form(action="/join", method="POST")
           input#username(type="text", name="username", autocomplete="off", placeholder="Username", required)
-          button(type="submit") Create New Game
-          button(type="button") Join Existing
+          input#game(type="text", name="game", autocomplete="off", placeholder="Lobby Secret", required)
+          button(type="submit") Join Game
   <script src="/javascripts/landing.js"></script>
