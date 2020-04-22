@@ -6,7 +6,8 @@ block content
       .landing-wrapper-title
         h1= title
       .landing-wrapper-body
-        form(action="/user")
-          input#username(type="text", name="username", autocomplete="off", placeholder="Username")
-          button(type="button") Create New Game
+        form#landing-form(action="/create", method="POST")
+          input#username(type="text", name="username", autocomplete="off", placeholder="Username", required)
+          button(type="submit") Create New Game
           button(type="button") Join Existing
+  <script src="/javascripts/landing.js"></script>

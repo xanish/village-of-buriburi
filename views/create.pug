@@ -2,7 +2,7 @@ extends layout
 
 block content
   #create-container
-    h1.page-title Create a game
+    h1.page-title= title
     #create-wrapper
         h4 Set role distribution
         .role-distribution
@@ -18,4 +18,3 @@ block content
                         .role-control-btn
                             .fa.fa-minus#decrement-btn
         button(type="button") Create Game
-

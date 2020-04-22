@@ -7,8 +7,8 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/create', function(req, res, next) {
-  res.render('create', { title: 'Express', roles: roles });
+router.post('/create', function(req, res, next) {
+  res.render('create', { title: req.body.username + '\'s Game', roles: roles });
 });
 
 module.exports = router;
