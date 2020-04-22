@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  #landing-container
+    #landing-wrapper
+      .landing-wrapper-title
+        h1= title
+      .landing-wrapper-body
+        form(action="/user")
+          input#username(type="text", name="username", autocomplete="off", placeholder="Username")
+          button(type="button") Create New Game
+          button(type="button") Join Existing
