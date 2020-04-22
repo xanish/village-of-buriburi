@@ -4,17 +4,17 @@ block content
   #create-container
     h1.page-title= title
     #create-wrapper
-        h4 Set role distribution
+      h4 Set role distribution
         .role-distribution
-            each role in roles
-                .role
-                    h6.role-name= role.name
-                    .role-description= role.description
-                    .role-alignment= 'Aligned with the ' + role.alignment
-                    .role-controls
-                        .role-control-btn
-                            .fa.fa-plus#increment-btn
-                        .current-count 0
-                        .role-control-btn
-                            .fa.fa-minus#decrement-btn
+          each role in roles
+            .role
+              h6.role-name= role.name
+              .role-description= role.description
+              .role-alignment= 'Aligned with the ' + role.alignment
+              .role-controls
+                .role-control-btn
+                  .fa.fa-plus#increment-btn
+                .current-count 0
+                .role-control-btn
+                  .fa.fa-minus#decrement-btn
         button(type="button") Create Game
