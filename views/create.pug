@@ -4,17 +4,20 @@ block content
   #create-container
     h1.page-title= title
     #create-wrapper
-      h4 Set role distribution
-      .role-distribution
-        each role in roles
-          .role
-            h6.role-name= role.name
-            .role-description= role.description
-            .role-alignment= 'Aligned with the ' + role.alignment
-            .role-controls
-              .role-control-btn
-                .fa.fa-plus#increment-btn
-              .current-count 0
-              .role-control-btn
-                .fa.fa-minus#decrement-btn
-      button(type="button") Create Game
+      form#create-game-form(action="/game", method="POST")
+        h4 Basic Details
+        input#username(type="text", name="username", autocomplete="off", placeholder="Username", required)
+        h4 Set role distribution
+        .role-distribution
+          each role in roles
+            .role
+              h6.role-name= role.name
+              .role-description= role.description
+              .role-alignment= 'Aligned with the ' + role.alignment
+              .role-controls
+                .role-control-btn
+                  button.fa.fa-plus.btn-small.increment-btn(type="button")
+                input.current-count(type="text", name="count-of-" + role.name.toLowerCase(), autocomplete="off")
+                .role-control-btn
+                  button.fa.fa-minus.btn-small.decrement-btn(type="button")
+        button(type="submit") Create Game

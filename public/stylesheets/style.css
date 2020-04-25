@@ -211,21 +211,16 @@ input[type="submit"]:active,button:active,.btn:active {
   display: flex;
   justify-content: flex-end;
 }
-.role-control-btn {
-  background-color: var(--theme-dark-2);
-  padding: 8px;
-  width: 30px;
-  text-align: center;
-  -moz-box-shadow: 0 2px 5px var(--theme-dark-0);
-  -webkit-box-shadow: 0 2px 5px var(--theme-dark-0);
-  box-shadow: 0 2px 5px var(--theme-dark-0);
-  cursor: pointer;
+.btn-small {
+  padding: 10px;
+  margin: 0;
 }
 .current-count {
-  padding: 10px;
-  width: 50px;
+  width: 50px!important;
   text-align: center;
+  margin: 0!important;
+  padding: 0!important;
 }
-#increment-btn, #decrement-btn {
+.increment-btn, .decrement-btn {
   vertical-align: middle;
 }
