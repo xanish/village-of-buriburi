@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('gunda:server');
+var debug = require('debug')('village-of-buriburi:server');
 var http = require('http');
 
 /**
