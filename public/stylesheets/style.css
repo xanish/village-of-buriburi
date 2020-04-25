@@ -223,4 +223,12 @@ input[type="submit"]:active,button:active,.btn:active {
 }
 .increment-btn, .decrement-btn {
   vertical-align: middle;
+  -moz-box-shadow: 0 2px 5px var(--theme-dark-0);
+  -webkit-box-shadow: 0 2px 5px var(--theme-dark-0);
+  box-shadow: 0 2px 5px var(--theme-dark-0);
+}
+.increment-btn:active, .decrement-btn:active {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
