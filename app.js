@@ -3,6 +3,8 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var http = require('http');
+var socket = require('socket.io');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -40,4 +42,13 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-module.exports = app;
+/**
+ * Create HTTP server.
+ */
+
+var server = http.createServer(app);
+var io = socket(server);
+
+io.on('connection', (socket) => {});
+
+module.exports = { app, server };
